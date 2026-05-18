@@ -3,8 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Sphinx git documentation
-========================
+.. raw:: html
+
+   <h1>
+     <a href="./pages/00_summary.html" style="color: inherit; text-decoration: none;">
+      Sphinx git Documentation
+     </a>
+   </h1>
 
 Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_

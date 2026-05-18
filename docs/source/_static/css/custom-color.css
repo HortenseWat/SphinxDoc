@@ -1,0 +1,14 @@
+/* Le nom ici (.red) doit être identique au nom du rôle dans conf.py */
+.red {
+    color: #d93025 !important; /* Rouge */
+    font-weight: bold;
+}
+
+.blue {
+    color: #1a73e8 !important; /* Bleu */
+    font-weight: bold;
+}
+
+.green {
+    color: #1ed760 !important; /* Vert */
+}

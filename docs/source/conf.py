@@ -29,3 +29,20 @@ html_static_path = ['_static']
 html_title = "Sphinx git documentation"
 html_theme_options = {
 }
+extensions = [
+    'sphinx_copybutton',
+]
+html_js_files = [
+    ('js/custom-click.js', {'loading_method': 'defer'}),
+]
+html_css_files = [
+    'css/custom-color.css',
+]
+# Déclaration globale des rôles de couleur pour tout le projet
+rst_prolog = """
+.. role:: red
+.. role:: blue
+.. role:: green
+"""
+# Masquer le bouton de copie uniquement pour les blocs de type "text"
+copybutton_selector = "div:not(.highlight-text) > div.highlight pre"
