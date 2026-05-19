@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Install Sphinx" href="02_second.html"><link rel="prev" title="Introduction" href="00_summary.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Create a documentation" href="02_second.html"><link rel="prev" title="Introduction" href="00_summary.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Create a project - Sphinx git documentation</title>
@@ -196,8 +196,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="00_summary.html">Introduction</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Create a project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#start-a-documentation">Start a Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_second.html">Install Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_second.html">Create a documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_third.html">Fill out the documentation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Applications:</span></p>
@@ -271,44 +270,6 @@
 </div>
 </div>
 </section>
-<section id="set-up-a-python-virtual-environment">
-<h2>Set up a Python virtual environment<a class="headerlink" href="#set-up-a-python-virtual-environment" title="Link to this heading">¶</a></h2>
-<p>After downloading Python, it is important to set up a virtual environment to use it. This means that any Python modifications we will do in out project won’t impact the global Python software but will only be effective in our project.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="o">.</span><span class="n">venv</span>
-</pre></div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If an error occurs, it may be because your computer doesn’t allow to run scripts (feature initially used to block viruses). You can disable it with the following command :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Set</span><span class="o">-</span><span class="n">ExecutionPolicy</span> <span class="o">-</span><span class="n">ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="o">-</span><span class="n">Scope</span> <span class="n">CurrentUser</span>
-</pre></div>
-</div>
-</div>
-<p>You then need to activate the venv (Virtual Environment) :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
-</pre></div>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>You can check if the Virtual Environment has been correctly set if (.venv) is displayed at the beginning of the command line.</p>
-</div>
-</section>
-<section id="download-sphinx">
-<h2>Download Sphinx<a class="headerlink" href="#download-sphinx" title="Link to this heading">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span>
-</pre></div>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Verify with :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">where</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="n">OR</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">version</span>
-</pre></div>
-</div>
-</div>
-</section>
-</section>
-<section id="start-a-documentation">
-<h1>Start a Documentation<a class="headerlink" href="#start-a-documentation" title="Link to this heading">¶</a></h1>
 <section id="create-and-import-a-repository">
 <h2>Create and import a repository<a class="headerlink" href="#create-and-import-a-repository" title="Link to this heading">¶</a></h2>
 <p>Go to your Github online account and create a new repository (project).
@@ -355,68 +316,12 @@ After copiying it, you can import it as a local project in your computer by usin
 <p>In this project, my first commit corresponds to :</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#download-git-and-python">Download Git and Python</a></p></li>
-<li><p><a class="reference internal" href="#download-sphinx">Download Sphinx</a></p></li>
 <li><p><a class="reference internal" href="#create-and-import-a-repository">Create and import a repository</a></p></li>
-<li><p><a class="reference internal" href="#create-your-first-file">Create your first file</a></p></li>
+<li><p><a class="reference internal" href="#create-a-main-branch">Create a main branch</a></p></li>
 <li><p><a class="reference internal" href="#create-your-first-file">Create your first file</a></p></li>
 <li><p><a class="reference internal" href="#make-your-first-commit">Make your first commit</a></p></li>
 </ul>
-<p>My second commit follow the steps of :</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#set-up-a-python-virtual-environment">Set up a Python virtual environment</a></p></li>
-<li><p><a class="reference internal" href="#create-basic-breadcrumbs">Create basic breadcrumbs</a></p></li>
-<li><p><a class="reference internal" href="#create-a-main-branch">Create a main branch</a></p></li>
-</ul>
-</section>
-<section id="create-basic-breadcrumbs">
-<h2>Create basic breadcrumbs<a class="headerlink" href="#create-basic-breadcrumbs" title="Link to this heading">¶</a></h2>
-<p><strong>sphinx-quickstart</strong> is an interactive tool that asks some questions about your project and then generates a complete documentation directory and sample Makefile to be used with sphinx-build.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span> <span class="n">docs</span>
-</pre></div>
-</div>
-<p>This will present to you a series of questions required to create the basic
-directory and configuration layout for your project inside the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder.
-To proceed, answer each question as follows:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">Separate</span> <span class="pre">source</span> <span class="pre">and</span> <span class="pre">build</span> <span class="pre">directories</span> <span class="pre">(y/n)</span> <span class="pre">[n]</span></code>: Write “<code class="docutils literal notranslate"><span class="pre">y</span></code>” (without
-quotes) and press <kbd class="kbd docutils literal notranslate">Enter</kbd>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">Project</span> <span class="pre">name</span></code>: Write “<code class="docutils literal notranslate"><span class="pre">YOUR-PROJECT-NAME</span></code>” (without quotes) and press
-<kbd class="kbd docutils literal notranslate">Enter</kbd>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">Author</span> <span class="pre">name(s)</span></code>: Write “<code class="docutils literal notranslate"><span class="pre">YOUR-NAME</span></code>” (without quotes) and press
-<kbd class="kbd docutils literal notranslate">Enter</kbd>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">Project</span> <span class="pre">release</span> <span class="pre">[]</span></code>: Write “<code class="docutils literal notranslate"><span class="pre">0.1</span></code>” (without quotes) and press
-<kbd class="kbd docutils literal notranslate">Enter</kbd>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">Project</span> <span class="pre">language</span> <span class="pre">[en]</span></code>: Leave it empty (the default, English) and press
-<kbd class="kbd docutils literal notranslate">Enter</kbd>.</p></li>
-</ul>
-<p>After the last question, you will see the new <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory with the
-following content.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docs
-├── build
-├── make.bat
-├── Makefile
- └── source
-   ├── conf.py
-   ├── index.rst
-   ├── _static
-   └── _templates
-</pre></div>
-</div>
-<p>The purpose of each of these files is:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">build/</span></code>
-An empty directory (for now) that will hold the rendered documentation.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">make.bat</span></code> and <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>
-Convenience scripts to simplify some common Sphinx operations, such as
-rendering the content.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source/conf.py</span></code>
-A Python script holding the configuration of the Sphinx project.  It contains
-the project name and release you specified to <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>, as well
-as some extra configuration keys.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source/index.rst</span></code>
-The <cite>root document</cite> of the project, which serves as welcome page and
-contains the root of the “table of contents tree” (or <em>toctree</em>).</p></li>
-</ul>
+<p>My second commit follow the steps of : <a class="reference internal" href="02_second.html"><span class="doc">Create a documentation</span></a></p>
 <p>Thanks to this bootstrapping step, you already have everything needed to render
 the documentation as HTML for the first time.  To do that, run this command:</p>
 <p>Then, open your terminal and login to gitHub. You’ll need to setup your user name first using these commands to set and check if the operation was successful.</p>
@@ -434,7 +339,7 @@ the documentation as HTML for the first time.  To do that, run this command:</p>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Install Sphinx</div>
+                <div class="title">Create a documentation</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -481,16 +386,10 @@ the documentation as HTML for the first time.  To do that, run this command:</p>
             <ul>
 <li><a class="reference internal" href="#">Create a project</a><ul>
 <li><a class="reference internal" href="#download-git-and-python">Download Git and Python</a></li>
-<li><a class="reference internal" href="#set-up-a-python-virtual-environment">Set up a Python virtual environment</a></li>
-<li><a class="reference internal" href="#download-sphinx">Download Sphinx</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#start-a-documentation">Start a Documentation</a><ul>
 <li><a class="reference internal" href="#create-and-import-a-repository">Create and import a repository</a></li>
 <li><a class="reference internal" href="#create-a-main-branch">Create a main branch</a></li>
 <li><a class="reference internal" href="#create-your-first-file">Create your first file</a></li>
 <li><a class="reference internal" href="#make-your-first-commit">Make your first commit</a></li>
-<li><a class="reference internal" href="#create-basic-breadcrumbs">Create basic breadcrumbs</a></li>
 </ul>
 </li>
 </ul>
@@ -508,6 +407,6 @@ the documentation as HTML for the first time.  To do that, run this command:</p>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=67c0497b"></script>
-    <script loading_method="defer" src="../_static/js/custom-click.js?v=6fc725a0"></script>
+    <script loading_method="defer" src="../_static/js/custom-click.js?v=85c74faf"></script>
     </body>
 </html>

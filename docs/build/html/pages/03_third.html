@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Git Commands" href="00_git.html"><link rel="prev" title="Install Sphinx" href="02_second.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Git Commands" href="00_git.html"><link rel="prev" title="Create a documentation" href="02_second.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Fill out the documentation - Sphinx git documentation</title>
@@ -174,7 +174,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -196,8 +196,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="00_summary.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_first.html">Create a project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="01_first.html#start-a-documentation">Start a Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_second.html">Install Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_second.html">Create a documentation</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Fill out the documentation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Applications:</span></p>
@@ -237,13 +236,65 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
           <section id="fill-out-the-documentation">
 <h1>Fill out the documentation<a class="headerlink" href="#fill-out-the-documentation" title="Link to this heading">¶</a></h1>
+<p>In this documentation, we will use reStructuedText (<cite>.rst</cite> extensions). It is a default plaintext markup language used by both Docutils and Sphinx.</p>
+<section id="organise-your-pages-with-index">
+<h2>Organise your pages with index<a class="headerlink" href="#organise-your-pages-with-index" title="Link to this heading">¶</a></h2>
+<p>The <cite>index.rst</cite> file is used to organise the different pages of the documentation. It is located in <cite>YOUR-REPOSITORY/docs/source</cite> directory.</p>
+<p>We access it by using the following commands :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">cd</span> <span class="n">docs</span>\<span class="n">source</span>
+<span class="linenos">2</span><span class="n">nano</span> <span class="n">index</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+<p>Then, the content of the page is as follows :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">nano</span> <span class="n">intex</span><span class="o">.</span><span class="n">rst</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+<span class="linenos">4</span>   <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+<span class="linenos">5</span>   <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">Contents</span><span class="p">:</span>
+<span class="linenos">6</span>
+<span class="linenos">7</span>   <span class="n">pages</span><span class="o">/</span><span class="mi">00</span><span class="n">_YOUR</span><span class="o">-</span><span class="n">PAGE0</span><span class="o">-</span><span class="n">NAME</span>
+<span class="linenos">8</span>   <span class="n">pages</span><span class="o">/</span><span class="mi">01</span><span class="n">_YOUR</span><span class="o">-</span><span class="n">PAGE1</span><span class="o">-</span><span class="n">NAME</span>
+<span class="linenos">9</span>   <span class="n">pages</span><span class="o">/</span><span class="mi">02</span><span class="n">_YOUR</span><span class="o">-</span><span class="n">PAGE2</span><span class="o">-</span><span class="n">NAME</span>
+</pre></div>
+</div>
+<p>You can add different sections by adding a new section in the Table of contents Tree (toctree) :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">nano</span> <span class="n">intex</span><span class="o">.</span><span class="n">rst</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+<span class="linenos"> 4</span>   <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+<span class="linenos"> 5</span>   <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">Contents</span><span class="p">:</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>   <span class="n">pages</span><span class="o">/</span><span class="mi">00</span><span class="n">_YOUR</span><span class="o">-</span><span class="n">PAGE0</span><span class="o">-</span><span class="n">NAME</span>
+<span class="linenos"> 8</span>   <span class="n">pages</span><span class="o">/</span><span class="mi">01</span><span class="n">_YOUR</span><span class="o">-</span><span class="n">PAGE1</span><span class="o">-</span><span class="n">NAME</span>
+<span class="linenos"> 9</span>   <span class="n">pages</span><span class="o">/</span><span class="mi">02</span><span class="n">_YOUR</span><span class="o">-</span><span class="n">PAGE2</span><span class="o">-</span><span class="n">NAME</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+<span class="linenos">13</span>   <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+<span class="linenos">14</span>   <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">Contents</span><span class="p">:</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>   <span class="n">pages</span><span class="o">/</span><span class="mi">00</span><span class="n">_YOUR</span><span class="o">-</span><span class="n">PAGE0</span><span class="o">-</span><span class="n">NAME</span>
+<span class="linenos">17</span>   <span class="n">pages</span><span class="o">/</span><span class="mi">01</span><span class="n">_YOUR</span><span class="o">-</span><span class="n">PAGE1</span><span class="o">-</span><span class="n">NAME</span>
+<span class="linenos">18</span>   <span class="n">pages</span><span class="o">/</span><span class="mi">02</span><span class="n">_YOUR</span><span class="o">-</span><span class="n">PAGE2</span><span class="o">-</span><span class="n">NAME</span>
+</pre></div>
+</div>
+</section>
+<section id="create-your-pages-directory-and-files">
+<h2>Create your pages directory and files<a class="headerlink" href="#create-your-pages-directory-and-files" title="Link to this heading">¶</a></h2>
+</section>
+<section id="fill-out-your-pages-with-documentation">
+<h2>Fill out your pages with documentation<a class="headerlink" href="#fill-out-your-pages-with-documentation" title="Link to this heading">¶</a></h2>
+</section>
+<section id="build-a-local-documentation">
+<h2>Build a local documentation<a class="headerlink" href="#build-a-local-documentation" title="Link to this heading">¶</a></h2>
+</section>
 </section>
 
         </article>
@@ -267,7 +318,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Install Sphinx</div>
+                <div class="title">Create a documentation</div>
                 
               </div>
             </a>
@@ -289,8 +340,30 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Fill out the documentation</a><ul>
+<li><a class="reference internal" href="#organise-your-pages-with-index">Organise your pages with index</a></li>
+<li><a class="reference internal" href="#create-your-pages-directory-and-files">Create your pages directory and files</a></li>
+<li><a class="reference internal" href="#fill-out-your-pages-with-documentation">Fill out your pages with documentation</a></li>
+<li><a class="reference internal" href="#build-a-local-documentation">Build a local documentation</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
@@ -301,6 +374,6 @@
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=67c0497b"></script>
-    <script loading_method="defer" src="../_static/js/custom-click.js?v=6fc725a0"></script>
+    <script loading_method="defer" src="../_static/js/custom-click.js?v=85c74faf"></script>
     </body>
 </html>
