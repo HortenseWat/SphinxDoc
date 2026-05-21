@@ -23,7 +23,8 @@ jobs:
 
       - name: Install Sphinx and dependencies
         run: |
-          pip install sphinx furo
+          pip install --upgrade pip
+          pip install sphinx furo sphinx-copybutton
 
       - name: Build HTML
         run: |
