@@ -33,7 +33,7 @@ extensions = [
     'sphinx_copybutton',
 ]
 html_js_files = [
-    ('js/custom-click.js', {'loading_method': 'defer'}),
+    ('js/custom-click.js', {'defer': 'defer'}),
 ]
 html_css_files = [
     'css/custom-color.css',
