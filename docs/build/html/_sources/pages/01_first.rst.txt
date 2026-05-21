@@ -103,7 +103,8 @@ Once you are satisfied with your files and created the correct environment to pu
 
 .. code-block:: python
     :linenos:
- 
+
+    cd ~\YOUR-REPOSITORY 
     git status 
     git add . 
     git commit -m "YOUR MESSAGE"

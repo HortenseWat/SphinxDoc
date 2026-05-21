@@ -25,6 +25,7 @@ documentation for details.
    pages/02_second
    pages/03_third
  
+.. _Applications:
 
 .. toctree::
    :caption: Applications:
